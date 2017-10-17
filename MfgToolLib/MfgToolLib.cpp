@@ -198,12 +198,9 @@ DWORD MfgLib_CreateInstanceHandle(INSTANCE_HANDLE *pHandle)
 	MFGLIB_VARS *pLibVars = NULL;
 
 	pLibVars = new MFGLIB_VARS;
-	if(pLibVars == NULL)
-	{
+	if(pLibVars == NULL) {
 		return MFGLIB_ERROR_NO_MEMORY;
-	}
-	else
-	{
+	} else {
 		pLibVars->g_pXmlHandler = NULL;
 		for(int i=0; i<MAX_BOARD_NUMBERS; i++)
 		{

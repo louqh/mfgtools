@@ -334,13 +334,13 @@ int main (int argc,char* argv[]){
 	}
 
 	OPERATIONS_INFORMATION infoOp;
-	int ret=MfgLib_Initialize();
-	if(ret!=MFGLIB_ERROR_SUCCESS){
+	int ret = MfgLib_Initialize();
+	if(ret != MFGLIB_ERROR_SUCCESS){
 		printf("Failed to initialize MfgLib\n");
 		return -1;
 	}
-	ret=MfgLib_CreateInstanceHandle(&lib);
-	if (ret!=MFGLIB_ERROR_SUCCESS){
+	ret = MfgLib_CreateInstanceHandle(&lib);
+	if (ret != MFGLIB_ERROR_SUCCESS){
 		printf("CreateInstanceHandle failed\n");
 		return -1;
 	}
@@ -363,7 +363,7 @@ int main (int argc,char* argv[]){
 	}
 
 	//set profile and list
-	ret = MfgLib_SetProfileName(lib,(BYTE_t *) myprofile);
+	ret = MfgLib_SetProfileName(lib, (BYTE_t *) myprofile);
 	if(ret != MFGLIB_ERROR_SUCCESS)
 	{
 		printf(_T("Set Profile name failed\n"));
@@ -395,13 +395,13 @@ int main (int argc,char* argv[]){
 
 	printf("Ready to flash.\n");
 
-	ret=MfgLib_InitializeOperation(lib);
-	if(ret!=MFGLIB_ERROR_SUCCESS){
+	ret = MfgLib_InitializeOperation(lib);
+	if(ret != MFGLIB_ERROR_SUCCESS){
 		printf("init op Failed code# %d \n",ret);
 		return -1;
 	}
-	ret= MfgLib_GetOperationInformation(lib,&infoOp);
-	if(ret!=MFGLIB_ERROR_SUCCESS){
+	ret = MfgLib_GetOperationInformation(lib, &infoOp);
+	if(ret != MFGLIB_ERROR_SUCCESS){
 		printf("Get op info  Failed code# %d \n",ret);
 		return -1;
 	}     
